@@ -127,6 +127,28 @@ def get_tensorized_filters_vectorized(n: int, k: int, device: torch.device) -> t
 
     return result
 
+def convolve_tensorized(
+    u: torch.Tensor,    # [bsz, seq_len, d_in]
+    phi: torch.Tensor,  # [sqrt(T'-2), k^2]
+    n: int
+) -> torch.Tensor:
+    """
+    Compute convolution with tensorized filters.
+    """
+    bsz, seq_len, d_in = u.shape
+
+    # FFT of input and filters
+    u_f = torch.fft.rfft(u.to(torch.float32), n=n, dim=1)   # [bsz, seq_len//2 + 1, d_in]
+    phi_f = torch.fft.rfft(phi.to(torch.float32), n=n, dim=0)   # [seq_len//2 + 1, k^2]
+
+    # Convolution in frequency domain
+    U = torch.fft.irfft(
+        u_f.unsqueeze(2) * phi_f.unsqueeze(1),
+        n=n, dim=1
+    )[:, :seq_len]  # [bsz, seq_len, k^2, d_in]
+
+    return u
+
 k = 16
 n = 512
 
