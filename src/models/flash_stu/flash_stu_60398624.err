@@ -1,0 +1,17 @@
+W1115 11:24:21.812000 4076878 site-packages/torch/distributed/run.py:793] 
+W1115 11:24:21.812000 4076878 site-packages/torch/distributed/run.py:793] *****************************************
+W1115 11:24:21.812000 4076878 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1115 11:24:21.812000 4076878 site-packages/torch/distributed/run.py:793] *****************************************
+2024-11-15 11:26:01,277 - INFO - Found 95 shards for split train
+2024-11-15 11:26:01,842 - INFO - Found 1 shards for split val
+2024-11-15 12:07:04,950 - INFO - Validation loss improved at step 900! Save the model to log/model_00900.safetensors, misc data to log/other_checkpoints_00900.pt.
+2024-11-15 12:48:21,585 - INFO - Validation loss improved at step 1800! Save the model to log/model_01800.safetensors, misc data to log/other_checkpoints_01800.pt.
+2024-11-15 13:29:32,030 - INFO - Validation loss improved at step 2700! Save the model to log/model_02700.safetensors, misc data to log/other_checkpoints_02700.pt.
+2024-11-15 14:10:43,112 - INFO - Validation loss improved at step 3600! Save the model to log/model_03600.safetensors, misc data to log/other_checkpoints_03600.pt.
+2024-11-15 14:52:08,052 - INFO - Validation loss improved at step 4500! Save the model to log/model_04500.safetensors, misc data to log/other_checkpoints_04500.pt.
+2024-11-15 15:33:48,048 - INFO - Validation loss improved at step 5400! Save the model to log/model_05400.safetensors, misc data to log/other_checkpoints_05400.pt.
+2024-11-15 16:15:29,403 - INFO - Validation loss improved at step 6300! Save the model to log/model_06300.safetensors, misc data to log/other_checkpoints_06300.pt.
+2024-11-15 16:57:08,788 - INFO - Validation loss improved at step 7200! Save the model to log/model_07200.safetensors, misc data to log/other_checkpoints_07200.pt.
+2024-11-15 17:38:49,800 - INFO - Validation loss improved at step 8100! Save the model to log/model_08100.safetensors, misc data to log/other_checkpoints_08100.pt.
+srun: Job step aborted: Waiting up to 47 seconds for job step to finish.
+slurmstepd: error: *** JOB 60398624 ON della-j13g2 CANCELLED AT 2024-11-15T17:48:47 ***

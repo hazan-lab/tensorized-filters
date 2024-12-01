@@ -1,0 +1,11 @@
+W1115 17:59:52.241000 2499162 site-packages/torch/distributed/run.py:793] 
+W1115 17:59:52.241000 2499162 site-packages/torch/distributed/run.py:793] *****************************************
+W1115 17:59:52.241000 2499162 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1115 17:59:52.241000 2499162 site-packages/torch/distributed/run.py:793] *****************************************
+2024-11-15 18:00:15,529 - INFO - Found 95 shards for split train
+2024-11-15 18:00:16,632 - INFO - Found 1 shards for split val
+2024-11-15 19:21:46,092 - INFO - Validation loss improved at step 1000! Save the model to log/model_01000.safetensors, misc data to log/other_checkpoints_01000.pt.
+2024-11-15 19:21:55,951 - INFO - [Rank 0]: Finished training.
+2024-11-15 19:21:55,951 - INFO - [Rank 0]: Waiting for other processes to finish...
+2024-11-15 19:21:55,951 - INFO - [Rank 1]: Finished training.
+2024-11-15 19:21:55,951 - INFO - [Rank 1]: Waiting for other processes to finish...

@@ -1,0 +1,105 @@
+W1130 03:51:38.939000 3123591 site-packages/torch/distributed/run.py:793] 
+W1130 03:51:38.939000 3123591 site-packages/torch/distributed/run.py:793] *****************************************
+W1130 03:51:38.939000 3123591 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1130 03:51:38.939000 3123591 site-packages/torch/distributed/run.py:793] *****************************************
+2024-11-30 03:55:38,061 - INFO - Found 95 shards for split train
+2024-11-30 03:55:38,857 - INFO - Found 1 shards for split val
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/scratch/gpfs/mn4560/hazan-lab/hazan_lab/tensorized_filters/models/flash_stu_2/train.py", line 355, in <module>
+[rank0]:     main()
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+[rank0]:     return f(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/hazan-lab/hazan_lab/tensorized_filters/models/flash_stu_2/train.py", line 298, in main
+[rank0]:     preds = model(inputs)
+[rank0]:             ^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/hazan-lab/hazan_lab/tensorized_filters/models/flash_stu/model.py", line 78, in forward
+[rank0]:     y_hat = self.lm_head(x)
+[rank0]:             ^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank0]:     return F.linear(input, self.weight, self.bias)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 6.11 GiB. GPU 0 has a total capacity of 79.21 GiB of which 2.48 GiB is free. Including non-PyTorch memory, this process has 76.72 GiB memory in use. Of the allocated memory 66.55 GiB is allocated by PyTorch, and 6.62 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+W1130 03:55:53.990000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3123596 closing signal SIGTERM
+W1130 03:55:53.991000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3123597 closing signal SIGTERM
+W1130 03:55:53.992000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3123598 closing signal SIGTERM
+W1130 03:55:53.992000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3123599 closing signal SIGTERM
+W1130 03:55:53.992000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3123600 closing signal SIGTERM
+W1130 03:55:53.993000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3123601 closing signal SIGTERM
+W1130 03:55:53.993000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3123602 closing signal SIGTERM
+E1130 03:55:55.734000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 3123595) of binary: /scratch/gpfs/mn4560/.conda/envs/hazan-lab/bin/python3
+2024-11-30 03:59:54,561 - INFO - Found 95 shards for split train
+2024-11-30 03:59:54,670 - INFO - Found 1 shards for split val
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/scratch/gpfs/mn4560/hazan-lab/hazan_lab/tensorized_filters/models/flash_stu_2/train.py", line 355, in <module>
+[rank0]:     main()
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+[rank0]:     return f(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/hazan-lab/hazan_lab/tensorized_filters/models/flash_stu_2/train.py", line 298, in main
+[rank0]:     preds = model(inputs)
+[rank0]:             ^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/hazan-lab/hazan_lab/tensorized_filters/models/flash_stu/model.py", line 78, in forward
+[rank0]:     y_hat = self.lm_head(x)
+[rank0]:             ^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/scratch/gpfs/mn4560/.conda/envs/hazan-lab/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank0]:     return F.linear(input, self.weight, self.bias)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 6.11 GiB. GPU 0 has a total capacity of 79.21 GiB of which 2.48 GiB is free. Including non-PyTorch memory, this process has 76.72 GiB memory in use. Of the allocated memory 66.55 GiB is allocated by PyTorch, and 6.62 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+W1130 04:00:06.423000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3124771 closing signal SIGTERM
+W1130 04:00:06.424000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3124772 closing signal SIGTERM
+W1130 04:00:06.425000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3124773 closing signal SIGTERM
+W1130 04:00:06.425000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3124774 closing signal SIGTERM
+W1130 04:00:06.425000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3124775 closing signal SIGTERM
+W1130 04:00:06.425000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3124776 closing signal SIGTERM
+W1130 04:00:06.426000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3124777 closing signal SIGTERM
+E1130 04:00:08.219000 3123591 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 3124770) of binary: /scratch/gpfs/mn4560/.conda/envs/hazan-lab/bin/python3
+2024-11-30 04:04:06,655 - INFO - Found 95 shards for split train
+2024-11-30 04:04:06,764 - INFO - Found 1 shards for split val
+2024-11-30 08:21:47,420 - INFO - Validation loss improved at step 4500! Save the model to log/model_04500.safetensors, misc data to log/other_checkpoints_04500.pt.
+2024-11-30 12:37:02,621 - INFO - Validation loss improved at step 9000! Save the model to log/model_09000.safetensors, misc data to log/other_checkpoints_09000.pt.
+srun: Job step aborted: Waiting up to 47 seconds for job step to finish.
+slurmstepd: error: *** STEP 60697545.1 ON della-k11g1 CANCELLED AT 2024-11-30T13:53:38 ***
+slurmstepd: error: *** JOB 60697545 ON della-k11g1 CANCELLED AT 2024-11-30T13:53:38 ***

@@ -1,0 +1,16 @@
+W1115 01:44:25.219000 3124051 site-packages/torch/distributed/run.py:793] 
+W1115 01:44:25.219000 3124051 site-packages/torch/distributed/run.py:793] *****************************************
+W1115 01:44:25.219000 3124051 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1115 01:44:25.219000 3124051 site-packages/torch/distributed/run.py:793] *****************************************
+2024-11-15 01:46:07,671 - INFO - Found 4 shards for split train
+2024-11-15 01:46:07,773 - INFO - Found 1 shards for split val
+2024-11-15 02:07:34,713 - INFO - Validation loss improved at step 900! Save the model to log/model_00900.safetensors, misc data to log/other_checkpoints_00900.pt.
+2024-11-15 02:07:49,459 - INFO - Validation loss improved at step 909! Save the model to log/model_00909.safetensors, misc data to log/other_checkpoints_00909.pt.
+2024-11-15 02:07:50,763 - INFO - [Rank 2]: Finished training.
+2024-11-15 02:07:50,763 - INFO - [Rank 1]: Finished training.
+2024-11-15 02:07:50,763 - INFO - [Rank 3]: Finished training.
+2024-11-15 02:07:50,763 - INFO - [Rank 0]: Finished training.
+2024-11-15 02:07:50,763 - INFO - [Rank 2]: Waiting for other processes to finish...
+2024-11-15 02:07:50,763 - INFO - [Rank 1]: Waiting for other processes to finish...
+2024-11-15 02:07:50,763 - INFO - [Rank 3]: Waiting for other processes to finish...
+2024-11-15 02:07:50,763 - INFO - [Rank 0]: Waiting for other processes to finish...
