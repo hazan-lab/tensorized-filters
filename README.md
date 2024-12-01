@@ -1,7 +1,7 @@
 # Tensorized Spectral Filtering
 
 <div align="center">
-  <img src="docs/tensorized.webp" alt="Tensorized Flash STU" width="360">
+  <img src="docs/tensorized.webp" alt="Tensorized Flash STU" width="480">
 </div>
 
 ---

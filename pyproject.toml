@@ -53,12 +53,10 @@ dependencies = [
     "colorama>=0.4.6",
     "pytest>=8.3.3",
     "ipykernel>=6.29.5",
-    "zstandard>=0.23.0",
-    "dask>=2024.11.2",
 ]
 
 [tool.setuptools]
-packages = ["src"]
+packages = ["tensorized_filters"]
 
 # ===============================
 # Project URLs
